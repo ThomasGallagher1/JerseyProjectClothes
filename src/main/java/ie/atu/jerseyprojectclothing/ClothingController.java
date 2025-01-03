@@ -15,6 +15,7 @@ public class ClothingController {
     @Autowired
     private ClothingRepository clothingRepository;
 
+
     @GetMapping("/team/{teamId}")
     public List<Clothing> getClothingByTeams(@PathVariable Long teamId){
         return clothingRepository.findByTeamId(teamId);
